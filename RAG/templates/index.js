@@ -28,18 +28,6 @@ const chatMessages = document.getElementById('chatMessages');
     async function simulateLLMResponse(userMessage) {
         let responseText = "I'm sorry, I don't have enough information to respond to that.";
 
-        // if (userMessage.toLowerCase().includes("hello") || userMessage.toLowerCase().includes("hi")) {
-        //     responseText = "Hello there! How can I help you today?";
-        // } else if (userMessage.toLowerCase().includes("question")) {
-        //     responseText = "I'm happy to answer your questions. Please ask away!";
-        // } else if (userMessage.toLowerCase().includes("vanilla css")) {
-        //     responseText = "Vanilla CSS refers to plain CSS without the use of frameworks or preprocessors. It gives you full control over styling.";
-        // } else if (userMessage.toLowerCase().includes("features")) {
-        //     responseText = "This is a simple chat interface to demonstrate basic UI with vanilla CSS, not a full-fledged LLM.";
-        // } else if (userMessage.toLowerCase().includes("thank you") || userMessage.toLowerCase().includes("thanks")) {
-        //     responseText = "You're most welcome!";
-        // }
-
         const data = {query: "this is test"}
 
         url = 'http://127.0.0.1:8000/initial'
@@ -56,8 +44,6 @@ const chatMessages = document.getElementById('chatMessages');
             const errorText = await response.text();
             throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
         }
-
-        console.log("hi")
 
         const result = await response.json(); // Assuming your backend might return a JSON response
         console.log('Success:', result);
