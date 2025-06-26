@@ -63,7 +63,6 @@ async def websocket_endpoint(websocket: WebSocket):
         while True:
             try:
                 user_query = await websocket.receive_json()
-                print(f"Received query: {user_query}")
 
                 query_text = user_query.get('query')
                 if not query_text:

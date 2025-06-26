@@ -41,3 +41,5 @@ Click on the link in the terminal to open the RAG server in your browser.
 3. Send the message to the agents.
 4. The agents will collaborate to answer your question using the shared knowledge base.
 
+![RAG System Screenshot](RAG/templates/demo.png)
+Fig: Screenshot of the RAG system's UI.
